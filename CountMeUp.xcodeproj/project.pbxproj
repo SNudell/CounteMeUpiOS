@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE78B30A222C445500440E42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE78B309222C445500440E42 /* AppDelegate.swift */; };
+		DE78B30C222C445500440E42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE78B30B222C445500440E42 /* ViewController.swift */; };
+		DE78B30F222C445500440E42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE78B30D222C445500440E42 /* Main.storyboard */; };
+		DE78B311222C445600440E42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE78B310222C445600440E42 /* Assets.xcassets */; };
+		DE78B314222C445600440E42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE78B312222C445600440E42 /* LaunchScreen.storyboard */; };
+		DE78B31F222C445600440E42 /* CountMeUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE78B31E222C445600440E42 /* CountMeUpTests.swift */; };
+		DE78B32A222C445600440E42 /* CountMeUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE78B329222C445600440E42 /* CountMeUpUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE78B31B222C445600440E42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE78B2FE222C445500440E42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE78B305222C445500440E42;
+			remoteInfo = CountMeUp;
+		};
+		DE78B326222C445600440E42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE78B2FE222C445500440E42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE78B305222C445500440E42;
+			remoteInfo = CountMeUp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DE78B306222C445500440E42 /* CountMeUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountMeUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE78B309222C445500440E42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE78B30B222C445500440E42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DE78B30E222C445500440E42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE78B310222C445600440E42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE78B313222C445600440E42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE78B315222C445600440E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE78B31A222C445600440E42 /* CountMeUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountMeUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE78B31E222C445600440E42 /* CountMeUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountMeUpTests.swift; sourceTree = "<group>"; };
+		DE78B320222C445600440E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE78B325222C445600440E42 /* CountMeUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountMeUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE78B329222C445600440E42 /* CountMeUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountMeUpUITests.swift; sourceTree = "<group>"; };
+		DE78B32B222C445600440E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE78B303222C445500440E42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE78B317222C445600440E42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE78B322222C445600440E42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE78B2FD222C445500440E42 = {
+			isa = PBXGroup;
+			children = (
+				DE78B308222C445500440E42 /* CountMeUp */,
+				DE78B31D222C445600440E42 /* CountMeUpTests */,
+				DE78B328222C445600440E42 /* CountMeUpUITests */,
+				DE78B307222C445500440E42 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE78B307222C445500440E42 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE78B306222C445500440E42 /* CountMeUp.app */,
+				DE78B31A222C445600440E42 /* CountMeUpTests.xctest */,
+				DE78B325222C445600440E42 /* CountMeUpUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE78B308222C445500440E42 /* CountMeUp */ = {
+			isa = PBXGroup;
+			children = (
+				DE78B309222C445500440E42 /* AppDelegate.swift */,
+				DE78B30B222C445500440E42 /* ViewController.swift */,
+				DE78B30D222C445500440E42 /* Main.storyboard */,
+				DE78B310222C445600440E42 /* Assets.xcassets */,
+				DE78B312222C445600440E42 /* LaunchScreen.storyboard */,
+				DE78B315222C445600440E42 /* Info.plist */,
+			);
+			path = CountMeUp;
+			sourceTree = "<group>";
+		};
+		DE78B31D222C445600440E42 /* CountMeUpTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE78B31E222C445600440E42 /* CountMeUpTests.swift */,
+				DE78B320222C445600440E42 /* Info.plist */,
+			);
+			path = CountMeUpTests;
+			sourceTree = "<group>";
+		};
+		DE78B328222C445600440E42 /* CountMeUpUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DE78B329222C445600440E42 /* CountMeUpUITests.swift */,
+				DE78B32B222C445600440E42 /* Info.plist */,
+			);
+			path = CountMeUpUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE78B305222C445500440E42 /* CountMeUp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE78B32E222C445600440E42 /* Build configuration list for PBXNativeTarget "CountMeUp" */;
+			buildPhases = (
+				DE78B302222C445500440E42 /* Sources */,
+				DE78B303222C445500440E42 /* Frameworks */,
+				DE78B304222C445500440E42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CountMeUp;
+			productName = CountMeUp;
+			productReference = DE78B306222C445500440E42 /* CountMeUp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE78B319222C445600440E42 /* CountMeUpTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE78B331222C445600440E42 /* Build configuration list for PBXNativeTarget "CountMeUpTests" */;
+			buildPhases = (
+				DE78B316222C445600440E42 /* Sources */,
+				DE78B317222C445600440E42 /* Frameworks */,
+				DE78B318222C445600440E42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE78B31C222C445600440E42 /* PBXTargetDependency */,
+			);
+			name = CountMeUpTests;
+			productName = CountMeUpTests;
+			productReference = DE78B31A222C445600440E42 /* CountMeUpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DE78B324222C445600440E42 /* CountMeUpUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE78B334222C445600440E42 /* Build configuration list for PBXNativeTarget "CountMeUpUITests" */;
+			buildPhases = (
+				DE78B321222C445600440E42 /* Sources */,
+				DE78B322222C445600440E42 /* Frameworks */,
+				DE78B323222C445600440E42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE78B327222C445600440E42 /* PBXTargetDependency */,
+			);
+			name = CountMeUpUITests;
+			productName = CountMeUpUITests;
+			productReference = DE78B325222C445600440E42 /* CountMeUpUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE78B2FE222C445500440E42 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Gustav Schmid";
+				TargetAttributes = {
+					DE78B305222C445500440E42 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					DE78B319222C445600440E42 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = DE78B305222C445500440E42;
+					};
+					DE78B324222C445600440E42 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = DE78B305222C445500440E42;
+					};
+				};
+			};
+			buildConfigurationList = DE78B301222C445500440E42 /* Build configuration list for PBXProject "CountMeUp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE78B2FD222C445500440E42;
+			productRefGroup = DE78B307222C445500440E42 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE78B305222C445500440E42 /* CountMeUp */,
+				DE78B319222C445600440E42 /* CountMeUpTests */,
+				DE78B324222C445600440E42 /* CountMeUpUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE78B304222C445500440E42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE78B314222C445600440E42 /* LaunchScreen.storyboard in Resources */,
+				DE78B311222C445600440E42 /* Assets.xcassets in Resources */,
+				DE78B30F222C445500440E42 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE78B318222C445600440E42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE78B323222C445600440E42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE78B302222C445500440E42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE78B30C222C445500440E42 /* ViewController.swift in Sources */,
+				DE78B30A222C445500440E42 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE78B316222C445600440E42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE78B31F222C445600440E42 /* CountMeUpTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE78B321222C445600440E42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE78B32A222C445600440E42 /* CountMeUpUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE78B31C222C445600440E42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE78B305222C445500440E42 /* CountMeUp */;
+			targetProxy = DE78B31B222C445600440E42 /* PBXContainerItemProxy */;
+		};
+		DE78B327222C445600440E42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE78B305222C445500440E42 /* CountMeUp */;
+			targetProxy = DE78B326222C445600440E42 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DE78B30D222C445500440E42 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE78B30E222C445500440E42 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DE78B312222C445600440E42 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE78B313222C445600440E42 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE78B32C222C445600440E42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DE78B32D222C445600440E42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE78B32F222C445600440E42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CountMeUp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Private.CountMeUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE78B330222C445600440E42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CountMeUp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Private.CountMeUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DE78B332222C445600440E42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CountMeUpTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Private.CountMeUpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CountMeUp.app/CountMeUp";
+			};
+			name = Debug;
+		};
+		DE78B333222C445600440E42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CountMeUpTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Private.CountMeUpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CountMeUp.app/CountMeUp";
+			};
+			name = Release;
+		};
+		DE78B335222C445600440E42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CountMeUpUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Private.CountMeUpUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CountMeUp;
+			};
+			name = Debug;
+		};
+		DE78B336222C445600440E42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CountMeUpUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Private.CountMeUpUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CountMeUp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE78B301222C445500440E42 /* Build configuration list for PBXProject "CountMeUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE78B32C222C445600440E42 /* Debug */,
+				DE78B32D222C445600440E42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE78B32E222C445600440E42 /* Build configuration list for PBXNativeTarget "CountMeUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE78B32F222C445600440E42 /* Debug */,
+				DE78B330222C445600440E42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE78B331222C445600440E42 /* Build configuration list for PBXNativeTarget "CountMeUpTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE78B332222C445600440E42 /* Debug */,
+				DE78B333222C445600440E42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE78B334222C445600440E42 /* Build configuration list for PBXNativeTarget "CountMeUpUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE78B335222C445600440E42 /* Debug */,
+				DE78B336222C445600440E42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE78B2FE222C445500440E42 /* Project object */;
+}
