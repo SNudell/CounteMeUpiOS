@@ -17,7 +17,6 @@ class RequestSender {
     var serverTrustPolicy: ServerTrustPolicy
     var serverTrustPolicies: [String: ServerTrustPolicy]
     
-//    var urlSession: URLSession
     var serverConfig: ServerConfig
     
     var afManager: SessionManager
@@ -44,17 +43,16 @@ class RequestSender {
         )
     }
     
-    func getAllCounters (completion: @escaping ((String?) -> ())) {
+    func getAllCounters (completion: @escaping (([Counter]?) -> ())) {
         
         let url = serverConfig.counterEndpoint
         
-
-       self.afManager.request(url,
-                   method: .get)
+        self.afManager.request(url,
+                               method: .get)
             .validate()
             .responseJSON { response in
                 guard response.result.isSuccess else {
-                    print("Error while fetching remote rooms: \(String(describing: response.result.error))")
+                    print("Error while fetching remote counters: \(String(describing: response.result.error))")
                     completion(nil)
                     return
                 }
@@ -63,8 +61,75 @@ class RequestSender {
                     print("couldn't convert answer to json")
                     return
                 }
-                print(value)
+                let counters = parseAll(counters: value)
+                completion(counters)
         }
     }
+    
+    func updateServerConfig() {
+        if let config = loadServerConfig() {
+            self.serverConfig = config
+        }
+    }
+    
+    func requestIncrement(of counter: Counter, by delta: Int64, completion: @escaping (Counter?) ->()) {
+        let url = serverConfig.incrementEndpoint
+        
+        self.afManager.request(url, method: .put, parameters: ["name": counter.name, "increment": delta], encoding: JSONEncoding.default , headers: [:]).validate()
+            .responseJSON { response in
+                guard response.result.isSuccess else {
+                    print("Error while trying to increment counters: \(String(describing: response.result.error))")
+                    completion(nil)
+                    return
+                }
+                
+                guard let value = response.result.value as? [String: Any],
+                    let counter = Counter(json: value) else {
+                    print("couldn't convert answer to counter")
+                    return
+                }
+                completion(counter)
+        }
+    }
+    
+    func requestDecrement(of counter: Counter, by delta: Int64, completion: @escaping (Counter?) -> ()) {
+        let url = serverConfig.decrementEndpoint
+        
+        self.afManager.request(url, method: .put, parameters: ["name": counter.name, "decrement":delta], encoding: JSONEncoding.default, headers: [:]).validate()
+            .responseJSON { (response) in
+                guard response.result.isSuccess else {
+                    print("Error while trying to decrement counters: \(String(describing: response.result.error))")
+                    completion(nil)
+                    return
+                }
+                
+                guard let value = response.result.value as? [String: Any],
+                    let counter = Counter(json: value) else {
+                        print("couldn't convert answer to counter")
+                        return
+                }
+                completion(counter)
+        }
+    }
+}
 
+func parseAll(counters: [[String: Any]]) -> [Counter] {
+    var parsedCounters = [Counter]()
+    for counterJson in counters {
+        if let counter = Counter(json: counterJson) {
+            parsedCounters.append(counter)
+        }
+    }
+    return parsedCounters
+}
+
+
+extension String: ParameterEncoding {
+    
+    public func encode(_ urlRequest: URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest {
+        var request = try urlRequest.asURLRequest()
+        request.httpBody = data(using: .utf8, allowLossyConversion: false)
+        return request
+    }
+    
 }

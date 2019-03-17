@@ -33,11 +33,10 @@ class ServerInputViewController: UIViewController, UINavigationBarDelegate, UITe
     let inputBorderWidth: CGFloat = 0.5
     let inputCornerRadius: CGFloat = 5
     
-    var requestSender: RequestSender?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        tryConnecting()
         initViews()
     }
     
@@ -182,9 +181,19 @@ class ServerInputViewController: UIViewController, UINavigationBarDelegate, UITe
             return
         }
         save(serverConfig: serverConfig)
-        self.requestSender = RequestSender()
-        requestSender?.getAllCounters(completion: {_ in })
-        
+        tryConnecting()
+    }
+    
+    func tryConnecting() {
+        requestSender.getAllCounters(completion: {counters in
+            guard let counters = counters else {
+                print("couldn't connect to server")
+                return
+            }
+            let listVC = CounterListViewController(style: .plain, counters: counters)
+            let viewNavigator = UINavigationController(rootViewController: listVC)
+            self.present(viewNavigator, animated: true, completion: nil)
+        })
     }
     
     func tryParseServerConfig() -> ServerConfig? {

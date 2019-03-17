@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		DE09C57C222FD57500911C07 /* countmeup.der in Resources */ = {isa = PBXBuildFile; fileRef = DE09C57A222FD57500911C07 /* countmeup.der */; };
 		DE09C57D222FD57500911C07 /* countmeup.cer in Resources */ = {isa = PBXBuildFile; fileRef = DE09C57B222FD57500911C07 /* countmeup.cer */; };
+		DE09C57F223691EB00911C07 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE09C57E223691EB00911C07 /* Counter.swift */; };
+		DE550928223A8E2D0059A5B1 /* CounterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE550927223A8E2D0059A5B1 /* CounterListViewController.swift */; };
+		DE55092A223A9E420059A5B1 /*  CounterTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE550929223A9E420059A5B1 /*  CounterTableCell.swift */; };
+		DE55092C223AA7F90059A5B1 /* BaseLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE55092B223AA7F90059A5B1 /* BaseLogic.swift */; };
 		DE571A04222F9BEC0015A3EC /* ServerInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE571A03222F9BEC0015A3EC /* ServerInputViewController.swift */; };
 		DE571A09222FB0C10015A3EC /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE571A08222FB0C10015A3EC /* ServerConfig.swift */; };
 		DE571A0C222FBA2C0015A3EC /* RequestSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE571A0B222FBA2C0015A3EC /* RequestSender.swift */; };
@@ -52,6 +56,10 @@
 /* Begin PBXFileReference section */
 		DE09C57A222FD57500911C07 /* countmeup.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = countmeup.der; sourceTree = SOURCE_ROOT; };
 		DE09C57B222FD57500911C07 /* countmeup.cer */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = countmeup.cer; sourceTree = SOURCE_ROOT; };
+		DE09C57E223691EB00911C07 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		DE550927223A8E2D0059A5B1 /* CounterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterListViewController.swift; sourceTree = "<group>"; };
+		DE550929223A9E420059A5B1 /*  CounterTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " CounterTableCell.swift"; sourceTree = "<group>"; };
+		DE55092B223AA7F90059A5B1 /* BaseLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLogic.swift; sourceTree = "<group>"; };
 		DE571A03222F9BEC0015A3EC /* ServerInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerInputViewController.swift; sourceTree = "<group>"; };
 		DE571A08222FB0C10015A3EC /* ServerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfig.swift; sourceTree = "<group>"; };
 		DE571A0B222FBA2C0015A3EC /* RequestSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSender.swift; sourceTree = "<group>"; };
@@ -106,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				DE571A03222F9BEC0015A3EC /* ServerInputViewController.swift */,
+				DE550927223A8E2D0059A5B1 /* CounterListViewController.swift */,
+				DE550929223A9E420059A5B1 /*  CounterTableCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -157,6 +167,8 @@
 				DE78B310222C445600440E42 /* Assets.xcassets */,
 				DE78B312222C445600440E42 /* LaunchScreen.storyboard */,
 				DE78B315222C445600440E42 /* Info.plist */,
+				DE09C57E223691EB00911C07 /* Counter.swift */,
+				DE55092B223AA7F90059A5B1 /* BaseLogic.swift */,
 			);
 			path = CountMeUp;
 			sourceTree = "<group>";
@@ -336,10 +348,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE09C57F223691EB00911C07 /* Counter.swift in Sources */,
 				DE571A0C222FBA2C0015A3EC /* RequestSender.swift in Sources */,
 				DE571A04222F9BEC0015A3EC /* ServerInputViewController.swift in Sources */,
+				DE55092C223AA7F90059A5B1 /* BaseLogic.swift in Sources */,
+				DE55092A223A9E420059A5B1 /*  CounterTableCell.swift in Sources */,
 				DE571A09222FB0C10015A3EC /* ServerConfig.swift in Sources */,
 				DE78B30A222C445500440E42 /* AppDelegate.swift in Sources */,
+				DE550928223A8E2D0059A5B1 /* CounterListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

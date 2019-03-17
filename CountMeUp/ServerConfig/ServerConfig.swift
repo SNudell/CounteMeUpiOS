@@ -28,6 +28,18 @@ class ServerConfig {
         }
     }
     
+    var incrementEndpoint: URL {
+        get{
+            return URL(string:"\(counterEndpoint)/increment")!
+        }
+    }
+    
+    var decrementEndpoint: URL {
+        get{
+            return URL(string:"\(counterEndpoint)/decrement")!
+        }
+    }
+    
     init (ip: String, port: String) {
         self.serverIp = ip
         self.port = port
@@ -38,6 +50,7 @@ class ServerConfig {
 func save(serverConfig: ServerConfig) {
     UserDefaults.standard.set(serverConfig.serverIp, forKey: KEY_FOR_SERVER_IP)
     UserDefaults.standard.set(serverConfig.port, forKey: KEY_FOR_SERVER_PORT)
+    requestSender.updateServerConfig()
 }
 
 func loadServerConfig() -> ServerConfig? {
