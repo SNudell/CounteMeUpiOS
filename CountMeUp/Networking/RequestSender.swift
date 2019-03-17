@@ -111,6 +111,27 @@ class RequestSender {
                 completion(counter)
         }
     }
+    
+    func create(counter name: String, withStartingValue startingValue: Int64, completion: @escaping (Counter?) -> ()) {
+        let url = serverConfig.counterEndpoint
+        
+        self.afManager.request(url, method: .post, parameters: ["name": name, "value":startingValue], encoding: JSONEncoding.default, headers: [:]).validate()
+            .responseJSON { response in
+                
+                guard response.result.isSuccess else {
+                    print("Error while trying to create counters: \(String(describing: response.result.error))")
+                    completion(nil)
+                    return
+                }
+                
+                guard let value = response.result.value as? [String: Any],
+                    let counter = Counter(json: value) else {
+                        print("couldn't convert answer to counter")
+                        return
+                }
+                completion(counter)
+        }
+    }
 }
 
 func parseAll(counters: [[String: Any]]) -> [Counter] {

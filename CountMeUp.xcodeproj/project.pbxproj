@@ -13,6 +13,7 @@
 		DE550928223A8E2D0059A5B1 /* CounterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE550927223A8E2D0059A5B1 /* CounterListViewController.swift */; };
 		DE55092A223A9E420059A5B1 /*  CounterTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE550929223A9E420059A5B1 /*  CounterTableCell.swift */; };
 		DE55092C223AA7F90059A5B1 /* BaseLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE55092B223AA7F90059A5B1 /* BaseLogic.swift */; };
+		DE55092E223EA15D0059A5B1 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE55092D223EA15D0059A5B1 /* CounterViewController.swift */; };
 		DE571A04222F9BEC0015A3EC /* ServerInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE571A03222F9BEC0015A3EC /* ServerInputViewController.swift */; };
 		DE571A09222FB0C10015A3EC /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE571A08222FB0C10015A3EC /* ServerConfig.swift */; };
 		DE571A0C222FBA2C0015A3EC /* RequestSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE571A0B222FBA2C0015A3EC /* RequestSender.swift */; };
@@ -60,6 +61,7 @@
 		DE550927223A8E2D0059A5B1 /* CounterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterListViewController.swift; sourceTree = "<group>"; };
 		DE550929223A9E420059A5B1 /*  CounterTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " CounterTableCell.swift"; sourceTree = "<group>"; };
 		DE55092B223AA7F90059A5B1 /* BaseLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLogic.swift; sourceTree = "<group>"; };
+		DE55092D223EA15D0059A5B1 /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		DE571A03222F9BEC0015A3EC /* ServerInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerInputViewController.swift; sourceTree = "<group>"; };
 		DE571A08222FB0C10015A3EC /* ServerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfig.swift; sourceTree = "<group>"; };
 		DE571A0B222FBA2C0015A3EC /* RequestSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSender.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				DE571A03222F9BEC0015A3EC /* ServerInputViewController.swift */,
 				DE550927223A8E2D0059A5B1 /* CounterListViewController.swift */,
 				DE550929223A9E420059A5B1 /*  CounterTableCell.swift */,
+				DE55092D223EA15D0059A5B1 /* CounterViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				DE09C57F223691EB00911C07 /* Counter.swift in Sources */,
 				DE571A0C222FBA2C0015A3EC /* RequestSender.swift in Sources */,
 				DE571A04222F9BEC0015A3EC /* ServerInputViewController.swift in Sources */,
+				DE55092E223EA15D0059A5B1 /* CounterViewController.swift in Sources */,
 				DE55092C223AA7F90059A5B1 /* BaseLogic.swift in Sources */,
 				DE55092A223A9E420059A5B1 /*  CounterTableCell.swift in Sources */,
 				DE571A09222FB0C10015A3EC /* ServerConfig.swift in Sources */,

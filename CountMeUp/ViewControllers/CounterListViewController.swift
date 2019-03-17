@@ -30,6 +30,7 @@ class CounterListViewController: UITableViewController {
     
     func styleNavBar() {
         navigationItem.title = "Counters"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addCounter))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,6 +55,15 @@ class CounterListViewController: UITableViewController {
         return counters.count
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let counter = counters[indexPath.row]
+        transition(to: counter)
+    }
+    
+    func transition(to counter: Counter) {
+        
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? CounterTableCell else {
             fatalError()
@@ -71,5 +81,60 @@ class CounterListViewController: UITableViewController {
             self.counters = allCounters
             self.tableView.reloadData()
         })
+    }
+    
+    @objc func addCounter() {
+        let alertController = UIAlertController(title: "Enter Name and Value?", message: "Enter the counters name and starting value", preferredStyle: .alert)
+        
+        //the confirm action taking the inputs
+        let confirmAction = UIAlertAction(title: "Confirm", style: .default) { (_) in
+            
+            //getting the input values from user
+            guard let name = alertController.textFields?[0].text,
+                !name.isEmpty,
+                self.isValid(name),
+                let value = alertController.textFields?[1].text,
+                !value.isEmpty,
+                let initialValue = Int64(value) else {
+                return
+            }
+            self.sendCreationRequest(name: name, initialValue: initialValue)
+        }
+        
+        //the cancel action doing nothing
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
+        
+        //adding textfields to our dialog box
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Enter Name"
+        }
+                
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Enter Starting value"
+            textField.keyboardType = .numberPad
+        }
+        
+        //adding the action to dialogbox
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
+        
+        //finally presenting the dialog box
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func isValid(_ name: String) -> Bool {
+        for char in name {
+            if char.isLetter || char.isNumber || char.isWhitespace {
+                continue
+            }
+            return false
+        }
+        return true
+    }
+    
+    func sendCreationRequest(name: String, initialValue: Int64) {
+        requestSender.create(counter: name, withStartingValue: initialValue, completion: {counter in
+            self.requestRefresh()
+            })
     }
 }
