@@ -25,6 +25,11 @@ class CounterListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(CounterTableCell.self, forCellReuseIdentifier: cellIdentifier)
+        styleNavBar()
+    }
+    
+    func styleNavBar() {
+        navigationItem.title = "Counters"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,7 +39,7 @@ class CounterListViewController: UITableViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        updater = nil
+        updater?.invalidate()
     }
     
     required init?(coder aDecoder: NSCoder) {
