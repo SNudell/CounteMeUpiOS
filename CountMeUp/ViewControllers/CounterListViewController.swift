@@ -35,6 +35,10 @@ class CounterListViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        startUpdater()
+    }
+    
+    func startUpdater() {
         updater = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(requestRefresh), userInfo: nil, repeats: true)
     }
     
@@ -53,6 +57,41 @@ class CounterListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return counters.count
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let counter = counters[indexPath.row]
+            confirmDeletion(of: counter)
+        }
+    }
+    
+    func confirmDeletion(of counter: Counter) {
+        let alertController = UIAlertController(title: "Are you sure?", message: "Confirm deletion of " + counter.name, preferredStyle: .alert)
+        
+        let confirmAction = UIAlertAction(title: "Delete", style: .destructive) { (_) in
+            requestSender.delete(counter) {
+                self.requestRefresh()
+            }
+        }
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
+        
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    override func tableView(_ tableView: UITableView, willBeginEditingRowAt indexPath: IndexPath) {
+        updater?.invalidate()
+    }
+    override func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
+        startUpdater()
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

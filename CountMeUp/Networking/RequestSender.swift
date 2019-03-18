@@ -132,6 +132,16 @@ class RequestSender {
                 completion(counter)
         }
     }
+    
+    func delete(_ counter: Counter, completion: @escaping () -> ()) {
+        let url = serverConfig.counterEndpoint.appendingPathComponent(counter.name)
+        
+        self.afManager.request(url, method: .delete, parameters: nil, encoding: JSONEncoding.default, headers: nil)
+            .validate()
+            .response {_ in
+                completion()
+        }
+    }
 }
 
 func parseAll(counters: [[String: Any]]) -> [Counter] {
