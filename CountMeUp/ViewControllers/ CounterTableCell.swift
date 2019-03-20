@@ -43,12 +43,16 @@ class CounterTableCell: UITableViewCell {
         valueLabel.translatesAutoresizingMaskIntoConstraints = false
         
         incrementButton = UIButton(type: .custom)
-        incrementButton.setImage(UIImage(named: "IncrementButton"), for: .normal)
+        let plusImage = UIImage(named: "IncrementButton")?.withRenderingMode(.alwaysTemplate)
+        incrementButton.setImage(plusImage, for: .normal)
         incrementButton.imageView?.contentMode = .scaleAspectFit
+        incrementButton.imageView?.tintColor = .black
         incrementButton.translatesAutoresizingMaskIntoConstraints = false
         
         decrementButton = UIButton(type: .custom)
-        decrementButton.setImage(UIImage(named: "DecrementButton"), for: .normal)
+        let minusImage = UIImage(named: "DecrementButton")?.withRenderingMode(.alwaysTemplate)
+        decrementButton.setImage(minusImage, for: .normal)
+        decrementButton.imageView?.tintColor = .black
         decrementButton.imageView?.contentMode = .scaleAspectFit
         decrementButton.translatesAutoresizingMaskIntoConstraints = false
         

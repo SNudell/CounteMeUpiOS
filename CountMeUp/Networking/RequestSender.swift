@@ -72,6 +72,26 @@ class RequestSender {
         }
     }
     
+    func request(counter: String, completion: @escaping (Counter?) ->()) {
+        let url = serverConfig.counterEndpoint.appendingPathComponent(counter)
+        
+        self.afManager.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: [:])
+            .validate().responseJSON { response in
+                guard response.result.isSuccess else {
+                    print("Error while trying to request counter with name of \(counter): \(String(describing: response.result.error))")
+                    completion(nil)
+                    return
+                }
+                
+                guard let value = response.result.value as? [String: Any],
+                    let newCounter = Counter(json: value) else {
+                        print("couldn't convert answer to counter")
+                        return
+                }
+                completion(newCounter)
+        }
+    }
+    
     func requestIncrement(of counter: Counter, by delta: Int64, completion: @escaping (Counter?) ->()) {
         let url = serverConfig.incrementEndpoint
         

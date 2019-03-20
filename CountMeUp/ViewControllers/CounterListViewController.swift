@@ -100,7 +100,8 @@ class CounterListViewController: UITableViewController {
     }
     
     func transition(to counter: Counter) {
-        
+        let vc = CounterViewController(nibName: nil, bundle: nil, counter: counter)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
